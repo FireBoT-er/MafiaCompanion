@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/MainMenu">
+
+    <fragment
+        android:id="@+id/MainMenu"
+        android:name="com.fbt.mafia.MainMenu"
+        android:label="@string/main_menu_label"
+        tools:layout="@layout/main_menu">
+
+        <action
+            android:id="@+id/action_MainMenu_to_AddPlayers"
+            app:destination="@id/AddPlayers" />
+        <action
+            android:id="@+id/action_MainMenu_to_playersDB"
+            app:destination="@id/playersDB" />
+        <action
+            android:id="@+id/action_MainMenu_to_history"
+            app:destination="@id/history" />
+    </fragment>
+    <fragment
+        android:id="@+id/AddPlayers"
+        android:name="com.fbt.mafia.AddPlayers"
+        android:label="@string/add_players_label"
+        tools:layout="@layout/add_players">
+
+        <action
+            android:id="@+id/action_AddPlayers_to_MainMenu"
+            app:destination="@id/MainMenu" />
+        <action
+            android:id="@+id/action_AddPlayers_to_GetRole"
+            app:destination="@id/getRole" />
+    </fragment>
+    <fragment
+        android:id="@+id/getRole"
+        android:name="com.fbt.mafia.GetRole"
+        android:label="fragment_get_role"
+        tools:layout="@layout/get_role" >
+        <action
+            android:id="@+id/action_getRole_to_AddPlayers"
+            app:destination="@id/AddPlayers" />
+        <action
+            android:id="@+id/action_getRole_to_night"
+            app:destination="@id/night" />
+    </fragment>
+    <fragment
+        android:id="@+id/night"
+        android:name="com.fbt.mafia.Night"
+        android:label="night"
+        tools:layout="@layout/night" >
+        <action
+            android:id="@+id/action_night_to_dayNightStart"
+            app:destination="@id/dayNightStart" />
+        <action
+            android:id="@+id/action_night_to_day"
+            app:destination="@id/day" />
+        <action
+            android:id="@+id/action_night_to_AddPlayers"
+            app:destination="@id/AddPlayers" />
+    </fragment>
+    <fragment
+        android:id="@+id/day"
+        android:name="com.fbt.mafia.Day"
+        android:label="day"
+        tools:layout="@layout/day" >
+        <action
+            android:id="@+id/action_day_to_lastWords"
+            app:destination="@id/lastWords" />
+        <action
+            android:id="@+id/action_day_to_dayNightStart"
+            app:destination="@id/dayNightStart" />
+        <action
+            android:id="@+id/action_day_to_endGame"
+            app:destination="@id/endGame" />
+        <action
+            android:id="@+id/action_day_to_AddPlayers"
+            app:destination="@id/AddPlayers" />
+    </fragment>
+    <fragment
+        android:id="@+id/lastWords"
+        android:name="com.fbt.mafia.LastWords"
+        android:label="last_words"
+        tools:layout="@layout/last_words" >
+        <action
+            android:id="@+id/action_lastWords_to_dayNightStart"
+            app:destination="@id/dayNightStart" />
+        <action
+            android:id="@+id/action_lastWords_to_day"
+            app:destination="@id/day" />
+        <action
+            android:id="@+id/action_lastWords_to_AddPlayers"
+            app:destination="@id/AddPlayers" />
+    </fragment>
+    <fragment
+        android:id="@+id/dayNightStart"
+        android:name="com.fbt.mafia.StartDayOrNight"
+        android:label="day_night_start"
+        tools:layout="@layout/start_day_or_night" >
+        <action
+            android:id="@+id/action_dayNightStart_to_night"
+            app:destination="@id/night" />
+        <action
+            android:id="@+id/action_dayNightStart_to_day"
+            app:destination="@id/day" />
+        <action
+            android:id="@+id/action_dayNightStart_to_lastWords"
+            app:destination="@id/lastWords" />
+        <action
+            android:id="@+id/action_dayNightStart_to_endGame"
+            app:destination="@id/endGame" />
+        <action
+            android:id="@+id/action_dayNightStart_to_AddPlayers"
+            app:destination="@id/AddPlayers" />
+    </fragment>
+    <fragment
+        android:id="@+id/endGame"
+        android:name="com.fbt.mafia.EndGame"
+        android:label="EndGame" >
+        <action
+            android:id="@+id/action_endGame_to_MainMenu"
+            app:destination="@id/MainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/playersDB"
+        android:name="com.fbt.mafia.Players"
+        android:label="players"
+        tools:layout="@layout/players" >
+        <action
+            android:id="@+id/action_playersDB_to_playerInfo"
+            app:destination="@id/playerInfo" />
+        <action
+            android:id="@+id/action_playersDB_to_MainMenu"
+            app:destination="@id/MainMenu" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerInfo"
+        android:name="com.fbt.mafia.PlayerInfo"
+        android:label="player_info"
+        tools:layout="@layout/player_info" >
+        <action
+            android:id="@+id/action_playerInfo_to_playersDB"
+            app:destination="@id/playersDB" />
+    </fragment>
+    <fragment
+        android:id="@+id/history"
+        android:name="com.fbt.mafia.History"
+        android:label="History" >
+        <action
+            android:id="@+id/action_history_to_MainMenu"
+            app:destination="@id/MainMenu" />
+        <action
+            android:id="@+id/action_history_to_gameInfo"
+            app:destination="@id/gameInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameInfo"
+        android:name="com.fbt.mafia.GameInfo"
+        android:label="game_info"
+        tools:layout="@layout/game_info" >
+        <action
+            android:id="@+id/action_gameInfo_to_history"
+            app:destination="@id/history" />
+    </fragment>
+</navigation>

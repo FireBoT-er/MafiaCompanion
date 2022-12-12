@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/players"
+        android:icon="@drawable/humans"
+        android:title="Игроки" />
+    <item
+        android:id="@+id/vote"
+        android:icon="@drawable/vote"
+        android:title="Голосование" />
+    <item
+        android:id="@+id/dead"
+        android:icon="@drawable/x_mark"
+        android:title="Выбывшие игроки" />
+</menu>

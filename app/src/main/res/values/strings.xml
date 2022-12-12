@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Ведущий «Мафии»</string>
+    <string name="action_settings">Настройки</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="main_menu_label">Главное меню</string>
+    <string name="add_players_label">Добавить игроков</string>
+    <string name="next">Далее</string>
+    <string name="previous">Назад</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

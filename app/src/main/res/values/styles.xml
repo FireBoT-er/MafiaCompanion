@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AlertDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorAlertDialogListItem">@color/white</item>
+        <item name="android:colorControlNormal">@color/white</item>
+        <item name="android:background">@color/material_dynamic_neutral10</item>
+        <item name="android:fontFamily">@font/aurora_bt_bold_condensed</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:checkedTextViewStyle">@style/CheckedTextView</item>
+        <item name="android:textAppearanceSmall">@style/TextAppearanceSmall</item>
+        <item name="android:textAppearanceMedium">@style/TextAppearanceMedium</item>
+        <item name="android:textAppearanceLarge">@style/TextAppearanceLarge</item>
+        <item name="android:windowTitleStyle">@style/DialogTitle</item>
+    </style>
+
+    <style name="CheckedTextView" parent="@style/Widget.MaterialComponents.CheckedTextView">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextAppearanceSmall" parent="TextAppearance.AppCompat.Small">
+        <item name="android:fontFamily">@font/aurora_bt_bold_condensed</item>
+    </style>
+
+    <style name="TextAppearanceMedium" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:fontFamily">@font/aurora_bt_bold_condensed</item>
+    </style>
+
+    <style name="TextAppearanceLarge" parent="TextAppearance.AppCompat.Large">
+        <item name="android:fontFamily">@font/aurora_bt_bold_condensed</item>
+    </style>
+
+    <style name="DialogTitle" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/aurora_bt_bold_condensed</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="ColoredHandleThemeForWholeApp">
+        <item name="colorAccent">@color/white</item>
+    </style>
+</resources>
